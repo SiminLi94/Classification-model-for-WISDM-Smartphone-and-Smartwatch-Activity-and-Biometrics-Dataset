@@ -63,3 +63,6 @@ Each arff file contains 91 attributes(so we have 91*4=364 features in total). We
 
 The image about correlation of variances of all 364 features and labels is as Fig. 1.
 
+Using the sklearn SelectFromModel function with random forest can help us reduce the feature. It calculate each entropy and choose those important features. Fig.2 shows the results for some features. We use threshold=0.005 to reduce the features number to.
+
+We finally decided to use PCA (Principal components analysis) to reduce features to 50. Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables (entities each of which takes on various numerical values) into a set of values of linearly uncorrelated variables called principal components. Fig.3. shows the results.
