@@ -66,3 +66,40 @@ The image about correlation of variances of all 364 features and labels is as Fi
 Using the sklearn SelectFromModel function with random forest can help us reduce the feature. It calculate each entropy and choose those important features. Fig.2 shows the results for some features. We use threshold=0.005 to reduce the features number to.
 
 We finally decided to use PCA (Principal components analysis) to reduce features to 50. Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables (entities each of which takes on various numerical values) into a set of values of linearly uncorrelated variables called principal components. Fig.3. shows the results.
+
+### 4. Training model
+- We used train_test_split to divide the dataset, 70% for training and 30% for test.
+- To validate our model, we choose to calculate the accuracy. Because cross_validation spent l lot of time and had the similar result with single accuracy.
+- We also use VotingClassifier to choose the result from Decision Tree, Gradien Boosting and Random Forest.
+
+### 5. Final Results
+According to the following test results, we decided to use PCA and random forest as our final methods which has the highest accuracy.
+
+1) Testing with data of all feature(364)
+a) RandomForestClassifier(n_estimators=100,max_dept
+h=20,criterion="entropy"):
+0.8826628352490421
+b) DecisionTreeClassifier(max_depth=20,criterion="en tropy"):
+0.7655651340996169
+c) GradientBoostingClassifier():
+0.8802681992337165
+
+2) Testing with selected feature(55) by SelectFromModel
+a) RandomForestClassifier(n_estimators=100,max_dept h=20,criterion="entropy"):
+0.8314176245210728
+b) DecisionTreeClassifier(max_depth=20,criterion="en tropy"):
+0.7325191570881227
+c) GradientBoostingClassifier():
+0.8010057471264368
+d) VotingClassifier between a),b),c):
+0. 8290229885057471
+
+3) Testing with selected feature(55) by PCA
+a) RandomForestClassifier(n_estimators=100,max_depth=20,criterion="entropy"):
+0. 8953544061302682
+b) DecisionTreeClassifier(max_depth=20,criterion="en tropy"):
+0. 6748084291187739 
+c) GradientBoostingClassifier():
+0. 814176245210728 
+d) VotingClassifier between a),b),c): 
+0. 860632183908046
