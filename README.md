@@ -71,6 +71,7 @@ Using the sklearn SelectFromModel function with random forest can help us reduce
 
 We finally decided to use PCA (Principal components analysis) to reduce features to 50. Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables (entities each of which takes on various numerical values) into a set of values of linearly uncorrelated variables called principal components. Fig.3. shows the results.
 
+<img width="451" alt="Find_the_best_components_of_PCA" src="https://user-images.githubusercontent.com/108902685/179279345-b5321f77-e7eb-47f4-9734-eccb47045871.png">
 
 ### 4. Training model
 - We used train_test_split to divide the dataset, 70% for training and 30% for test.
