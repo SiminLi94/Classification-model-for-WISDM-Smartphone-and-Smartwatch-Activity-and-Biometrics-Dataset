@@ -67,7 +67,10 @@ The image about correlation of variances of all 364 features and labels is as Fi
 
 Using the sklearn SelectFromModel function with random forest can help us reduce the feature. It calculate each entropy and choose those important features. Fig.2 shows the results for some features. We use threshold=0.005 to reduce the features number to.
 
+<img width="268" alt="results_of_slectFromModel" src="https://user-images.githubusercontent.com/108902685/179279148-c9fab57f-8733-48df-b843-234c8c1fdffe.png">
+
 We finally decided to use PCA (Principal components analysis) to reduce features to 50. Principal component analysis (PCA) is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables (entities each of which takes on various numerical values) into a set of values of linearly uncorrelated variables called principal components. Fig.3. shows the results.
+
 
 ### 4. Training model
 - We used train_test_split to divide the dataset, 70% for training and 30% for test.
