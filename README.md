@@ -63,7 +63,7 @@ Each arff file contains 91 attributes(so we have 91*4=364 features in total). We
 
 The image about correlation of variances of all 364 features and labels is as Fig. 1.
 
-<img width="405" alt="correlation of variances" src="https://user-images.githubusercontent.com/108902685/179277756-0c919b6a-c194-4861-aaba-104ba62dcd02.png">
+<img width="623" alt="correlation_of_variances" src="https://user-images.githubusercontent.com/108902685/179278923-8236f6ba-2180-40ad-a1ea-9e66018cd244.png">
 
 Using the sklearn SelectFromModel function with random forest can help us reduce the feature. It calculate each entropy and choose those important features. Fig.2 shows the results for some features. We use threshold=0.005 to reduce the features number to.
 
