@@ -38,8 +38,28 @@ According our test results, Decision Tree has the lowest accuracy.
 
 ## Code and Process
 Our program contains four part: data processing, choosing hyperparameters, selecting features and training the model.
-
 ### 1. Data Processing
+- Getting data from arff files. The data from arff files are the result after computing the raw data. They are four arff files which represent four machines (phone accel, phone gyno, watch accel and watch gyno) Each file contains 91 attributes.
+- Changing label from alphabets A-S ( represent the different 18 activities) to numbers 1-18 for model training.
+- Combining phone accel, gyno, watch accel, gyno features according to the time order.
+- Shuffling dataset. 
 ### 2. Hyper-parameters
+We use sklearn gridsearch function to decide the best hyper-parameters of each model.
+1) Radom Forest
+We use sklearn gridsearch function to decide the best hyper-parameters.
+grid search
+max_depth=30(10,20,30)(avoid over fit) n_estimators=1000 (100,500,1000,1500) criterion='entropy'('gini' , 'entropy')
+The accuracy of the best hyper-parameters is 0.884. But when we used: RandomForestClassifier(n_estimators=100, max_depth=20,criterion="entropy")
+The accuracy is 0.882.
+Because the accuracy only decreased by about 0.002, we choose the later to reduce the cost ( time and memory exhaustive ).
+2) Decision Tree
+max_depth=20(10,20,30)(avoid over fit) 
+criterion='entropy'('gini' , 'entropy')
+3) GradienBoosting
+It takes a long time to train a GradienBoosting model, as a result, we trained a GradienBoosting model with sklearn default hyperparameters.
+
 ### 3. Feature Selection
+Each arff file contains 91 attributes(so we have 91*4=364 features in total). We need to check which attributes are more correlative to our model.
+
+The image about correlation of variances of all 364 features and labels is as Fig. 1.
 
