@@ -36,26 +36,26 @@ An ensemble method using multiple decision trees.
 ### 2. Gradient Boosting
 Sequentially builds models to fix previous errors.
 
-** Pros:**
-- Top-tier predictive power
-- Flexible and customizable
-- Handles missing data
-
-** Cons:**
-- Slow training
-- Risk of overfitting without regularization
-- Used default hyperparameters for faster testing.
+  **Pros:**
+  - Top-tier predictive power
+  - Flexible and customizable
+  - Handles missing data
+  
+  **Cons:**
+  - Slow training
+  - Risk of overfitting without regularization
+  - Used default hyperparameters for faster testing.
 
 ### 3. Decision Tree
 A simple and interpretable model.
 
-** Pros:**
-- No data scaling required
-- Handles missing values well
-- Easy to explain
-
-** Cons:**
-- Lower accuracy compared to ensemble methods
+  **Pros:**
+  - No data scaling required
+  - Handles missing values well
+  - Easy to explain
+  
+  **Cons:**
+  - Lower accuracy compared to ensemble methods
 
 ## Project Pipeline
 
