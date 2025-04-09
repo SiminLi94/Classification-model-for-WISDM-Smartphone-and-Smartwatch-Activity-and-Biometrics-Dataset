@@ -116,7 +116,7 @@ Used GridSearchCV from sklearn:
 | Voting Classifier | 0.8606   |
 
 ## Final Verdict
-🎯 **PCA + Random Forest** achieved the highest accuracy of 0.8954 and is selected as the final model due to its superior performance and efficiency in high-dimensional space.
+**PCA + Random Forest** achieved the highest accuracy of 0.8954 and is selected as the final model due to its superior performance and efficiency in high-dimensional space.
 
 ## Project Structure
 ```bash
