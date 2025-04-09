@@ -28,10 +28,10 @@ Build a robust classification model that can **accurately predict human activity
 ### 1. Random Forest
 An ensemble method using multiple decision trees.
 
-** Pros:**
-- High accuracy  
-- Good feature importance estimates  
-- Fast test error estimation  
+  **Pros:**
+  - High accuracy  
+  - Good feature importance estimates  
+  - Fast test error estimation  
 
 ### 2. Gradient Boosting
 Sequentially builds models to fix previous errors.
